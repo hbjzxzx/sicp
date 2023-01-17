@@ -1,0 +1,22 @@
+#lang racket
+
+(define (pascal-tri row col)
+		(cond ((or (= row col) (= col 1)) 1)
+			  (else (+ (pascal-tri (- row 1) col) (pascal-tri (- row 1) (- col 1))))
+		))
+
+(pascal-tri 1 1)
+(pascal-tri 2 1)
+(pascal-tri 2 2)
+(pascal-tri 3 1)
+(pascal-tri 3 2)
+(pascal-tri 3 3)
+(pascal-tri 4 1)
+(pascal-tri 4 2)
+(pascal-tri 4 3)
+(pascal-tri 4 4)
+(pascal-tri 5 1)
+(pascal-tri 5 2)
+(pascal-tri 5 3)
+(pascal-tri 5 4)
+(pascal-tri 5 5)
